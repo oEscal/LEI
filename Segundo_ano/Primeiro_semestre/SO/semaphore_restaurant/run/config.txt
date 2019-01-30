@@ -1,0 +1,6 @@
+#ngroups
+10
+#startTime timeToEat
+1000 250 
+2000 600 
+250 2000
