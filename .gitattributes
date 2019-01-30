@@ -1,0 +1,6 @@
+*.java linguist-language=Java
+*.m linguist-language=Matlab
+*.sh linguist-language=Bash
+*.c linguist-language=C
+*.cpp linguist-language=C++
+*.h linguist-language=C
