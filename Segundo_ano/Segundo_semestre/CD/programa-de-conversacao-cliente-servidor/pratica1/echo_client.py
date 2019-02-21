@@ -1,6 +1,5 @@
 import sys
 import socket
-import selectors
 import json
 
 
@@ -8,38 +7,6 @@ import json
 HOST = "localhost"
 MESSAGE_SIZE = 1024
 PORT = int(sys.argv[1])
-
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-my_name = ""
-
-def getInput(stdin, mask):
-   print("\n\n\n"
-         "What to do?\n"
-         "1 - Send message\n"
-         "2 - See inbox\n"
-         "3 - Leave chat\n"
-         "> ", end='')
-   opt = stdin.read()
-
-   all_clients = getClients(sock, my_name)
-   print("\n\n\n"
-         "Clients:")
-   for i in range(len(all_clients)):
-      print(str(i + 1) + " - " + all_clients[i])
-
-   if int(opt) == 1:
-      client_send = input("> ")
-      sendMessageToClient(sock, my_name, all_clients[int(client_send) - 1])
-   elif int(opt) == 2:
-      client_recv = input("> ")
-      recvMessageFromClient(sock, my_name, all_clients[int(client_recv) - 1])
-   elif int(opt) == 3:
-      unregister(sock, my_name)
-      exit()
-      #keep_running = False
-
-def optionsMenu(sock, mask):
-
 
 
 # function to receive a message from a server
@@ -98,17 +65,36 @@ def recvMessageFromClient(sock, my_name, client_recv):
       print("< " + m)
 
 
-# main function, where are called the functions of some option
+# main function, where is created the client's socket and where are called the functions of some option
 def main():
-   sel = selectors.DefaultSelector()
-   sel.register(sys.stdin, selectors.EVENT_READ, getInput)
-   sel.register(sock, selectors.EVENT_READ, register)
+   sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-   global my_name
    my_name = register(sock)
-
    keep_running = True
    while keep_running:
-      
+      opt = input("\n\n\n"
+                  "What to do?\n"
+                  "1 - Send message\n"
+                  "2 - See inbox\n"
+                  "3 - Leave chat\n"
+                  "> ")
+
+
+      all_clients = getClients(sock, my_name)
+      print("\n\n\n"
+            "Clients:")
+      for i in range(len(all_clients)):
+         print(str(i + 1) + " - " + all_clients[i])
+
+      if int(opt) == 1:
+         client_send = input("> ")
+         sendMessageToClient(sock, my_name, all_clients[int(client_send) - 1])
+      elif int(opt) == 2:
+         client_recv = input("> ")
+         recvMessageFromClient(sock, my_name, all_clients[int(client_recv) - 1])
+      elif int(opt) == 3:
+         unregister(sock, my_name)
+         keep_running = False
+
 
 main()
