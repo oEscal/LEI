@@ -5,84 +5,124 @@ import json
 
 
 clients = {}
+new_client_object = {"id": None,
+                     "messages": None}
+
+
 sel = selectors.DefaultSelector()
 
-HOST = "localhost"
-PORT = int(sys.argv[1])
+HOST = sys.argv[1]
+PORT = int(sys.argv[2])
 MESSAGE_SIZE = 1024
+
+# function to receive a message from a server
+def receiveMessage(client):
+   try:
+      message_received = json.loads(client.recv(MESSAGE_SIZE).decode("UTF-8"))
+      return message_received
+   except json.decoder.JSONDecodeError:
+      for cl_index in range(len(clients.values())):
+
+         # verify if client exists to remove him from database
+         if client == list(clients.values())[cl_index]["id"]:
+            client_name = list(clients.keys())[cl_index]
+            unregister(client, client_name)
+
+      # return False to alert that was an error
+      return False
+
+# function to send some message to a server
+def sendMessage(client, message_to_send):
+   message_to_send = json.dumps(message_to_send).encode("UTF-8")
+   client.send(message_to_send)
 
 
 # select a client (socket)
-def accept(sock, mask):
+def accept(sock):
    client, client_address = sock.accept()
-   client.setblocking(False)
    sel.register(client, selectors.EVENT_READ, initialize)
 
 # function where are managed all options
-def initialize(client, mask):
-   message_received = json.loads(client.recv(MESSAGE_SIZE).decode("UTF-8"))
+def initialize(client):
+   message_received = receiveMessage(client)
+   if not message_received:
+      return
+
    client_action = message_received["action"]
+   name_from = message_received["name"]
+   name_to = message_received["name_receiver"]
+   message = message_received["message"]
+
 
    if client_action == "register":
-      client.setblocking(True)
-
-      client_name = message_received["name"]
-      register(client, client_name)
-
-      client.setblocking(False)
+      register(client, name_from)
    elif client_action == "get_clients":
       sendClients(client)
    elif client_action == "send_message":
-      client_name_from = message_received["name"]
-      client_name_to = message_received["name_receiver"]
-      message_to_send = message_received["message"]
-
-      sendMessage(client_name_from, client_name_to, message_to_send)
+      sendMessageToClient(name_from, name_to, message)
    elif client_action == "recv_message":
-      sendInbox(client, message_received["name"], message_received["name_receiver"])
+      sendInbox(client, name_from, name_to)
    elif client_action == "unregister":
-      client_name = message_received["name"]
-      clients.pop(client_name)
-      sel.unregister(client)
-      client.close()
+      unregister(client, name_from)
 
 # to register a client
 def register(client, client_name):
+   already_exists = False
    # verify if there are clients with requested name
    if client_name not in clients.keys():
-      clients[client_name] = {"id": client,
-                              "messages": {}}
+      new_client_object["id"] = client
+      new_client_object["messages"] = {}
 
-      message_send = json.dumps(True)
-   else:
-      message_send = json.dumps(False)
+      clients[client_name] = dict.copy(new_client_object)
 
-   client.send(message_send.encode("UTF-8"))
+      already_exists = True
 
+   sendMessage(client, already_exists)
+
+# to unregister a client
+def unregister(client, client_name):
+   clients.pop(client_name)
+   sel.unregister(client)
+   client.close()
 
 # send list of registered clients
 def sendClients(client):
    client_names = list(clients.keys())
-   message_send = json.dumps(client_names)
-   client.send(message_send.encode("UTF-8"))
-
+   sendMessage(client, client_names)
 
 # send message to other specific
-def sendMessage(client_name_from, client_name_to, message):
-   if client_name_from not in clients[client_name_to]["messages"].keys():
-      clients[client_name_to]["messages"][client_name_from] = []
-   clients[client_name_to]["messages"][client_name_from].append(message)
+def sendMessageToClient(client_name_from, client_name_receiver, message):
+   inbox_receiver_per_client = clients[client_name_receiver]["messages"]
+
+   # list all the clients which already had sent a message to the receiver
+   names_inbox_receiver = list(inbox_receiver_per_client.keys())
+
+   # create a chat from client_name_from to client_name_receiver
+   if client_name_from not in names_inbox_receiver:
+      inbox_receiver_per_client[client_name_from] = []
+
+   # add a new message to the chat
+   inbox_receiver_per_client[client_name_from].append(message)
+
+   # send a notification of new message to the receiver
+   client_id_receiver = clients[client_name_receiver]["id"]
+   sendMessage(client_id_receiver, "New message from " + client_name_from)
 
 
 # show all messages received from specific client
-def sendInbox(client, client_name_from, client_name_to):
-   if client_name_to in clients[client_name_from]["messages"].keys():
-      inbox = clients[client_name_from]["messages"][client_name_to]
+def sendInbox(client, client_name_from, client_name_receiver):
+   inbox_per_client = clients[client_name_from]["messages"]
+
+   # list all the clients which already had sent a message to the client
+   names_inbox_client = list(inbox_per_client.keys())
+
+   # select all messages from client_name_receiver to client_name_from
+   if client_name_receiver in names_inbox_client:
+      inbox = inbox_per_client[client_name_receiver]
    else:
       inbox = []
 
-   message_send = json.dumps(inbox)
-   client.send(message_send.encode("UTF-8"))
+   sendMessage(client, inbox)
 
 
 def main():
@@ -97,7 +137,6 @@ def main():
       events = sel.select()
       for key, mask in events:
          callback = key.data
-         callback(key.fileobj, mask)
-
+         callback(key.fileobj)
 
 main()

@@ -5,21 +5,24 @@ import json
 
 
 # constants
-HOST = "localhost"
+HOST = sys.argv[1]
+PORT = int(sys.argv[2])
 MESSAGE_SIZE = 1024
-PORT = int(sys.argv[1])
+LINES_BEFORE_NOTIFICATION = 100
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 my_name = ""
 
-def getInput(stdin, mask):
+def menu():
    print("\n\n\n"
          "What to do?\n"
          "1 - Send message\n"
          "2 - See inbox\n"
          "3 - Leave chat\n"
          "> ", end='')
-   opt = stdin.read()
+
+def getInput(stdin):
+   opt = stdin.readline()
 
    all_clients = getClients(sock, my_name)
    print("\n\n\n"
@@ -36,10 +39,14 @@ def getInput(stdin, mask):
    elif int(opt) == 3:
       unregister(sock, my_name)
       exit()
-      #keep_running = False
 
-def optionsMenu(sock, mask):
 
+def getNotification(sock):
+   notification = receiveMessage(sock)
+
+   for i in range(LINES_BEFORE_NOTIFICATION):
+      print()
+   print(notification)
 
 
 # function to receive a message from a server
@@ -102,13 +109,17 @@ def recvMessageFromClient(sock, my_name, client_recv):
 def main():
    sel = selectors.DefaultSelector()
    sel.register(sys.stdin, selectors.EVENT_READ, getInput)
-   sel.register(sock, selectors.EVENT_READ, register)
+   sel.register(sock, selectors.EVENT_READ, getNotification)
 
    global my_name
    my_name = register(sock)
 
    keep_running = True
    while keep_running:
+      menu()
+      for k, mask in sel.select():
+         callback = k.data
+         callback(k.fileobj)
       
 
 main()
