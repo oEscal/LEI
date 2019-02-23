@@ -1,6 +1,5 @@
 import sys
 import socket
-import selectors
 import json
 
 
@@ -105,15 +104,13 @@ def recvMessageFromClient(sock, my_name, client_recv):
       print("< " + m)
 
 
-# main function, where are called the functions of some option
+# main function, where is created the client's socket and where are called the functions of some option
 def main():
    sel = selectors.DefaultSelector()
    sel.register(sys.stdin, selectors.EVENT_READ, getInput)
    sel.register(sock, selectors.EVENT_READ, getNotification)
 
-   global my_name
    my_name = register(sock)
-
    keep_running = True
    while keep_running:
       menu()
