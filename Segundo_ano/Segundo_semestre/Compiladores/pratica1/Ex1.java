@@ -7,7 +7,7 @@ public class Ex1 {
     public static void main(String args[]){
         double num1 = 0,
                 num2 = 0,
-                result = 0;
+                result;
         Character operator;
 
         String imputed_string;
@@ -42,17 +42,7 @@ public class Ex1 {
             System.exit(1);
         }
 
-
-        // calc
-        switch (operator){
-            case '+': result = num1 + num2; break;
-            case '-': result = num1 - num2; break;
-            case '/': result = num1 / num2; break;
-            case '*': result = num1 * num2; break;
-            default: System.err.println("Error!\n" +
-                                        "Operator unknown!");
-                    System.exit(1);
-        }
+        result = Calculator.calc(num1, num2, operator);
 
         System.out.println("Result: " + result);
 
