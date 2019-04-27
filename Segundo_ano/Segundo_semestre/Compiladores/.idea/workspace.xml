@@ -12,86 +12,65 @@
     <session id="1805629238">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
-          <entry key="txt" value="1" />
+          <entry key="class" value="3" />
+          <entry key="dict_eng_to_port" value="1" />
+          <entry key="java" value="19" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="19" />
+          <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3306" />
+          <entry key="class" value="2" />
+          <entry key="dummy" value="19" />
+          <entry key="g4" value="15" />
+          <entry key="java" value="12821" />
+          <entry key="txt" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3306" />
+          <entry key="ANTLR v4 grammar file" value="15" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="12821" />
+          <entry key="PLAIN_TEXT" value="65" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pratica1/src/Ex1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pratica1/src/Ex2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pratica1/src/Ex3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pratica1/src/Ex4.java">
+        <entry file="file://$PROJECT_DIR$/pratica2/ex8/MyQuestionsVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+            <state relative-caret-position="264">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pratica1/numbers.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -103,14 +82,44 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>isDi</find>
+      <find />
+      <find>adeus</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pratica1/src/ex1.java" />
-        <option value="$PROJECT_DIR$/pratica1/src/Ex1.java" />
         <option value="$PROJECT_DIR$/pratica1/src/Ex2.java" />
-        <option value="$PROJECT_DIR$/pratica1/src/Ex3.java" />
         <option value="$PROJECT_DIR$/pratica1/src/Ex4.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex3.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex4_bashPipeline.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex4_v2.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/ReadWordsToNumbers.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex1.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Calculator.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex5.java" />
+        <option value="$PROJECT_DIR$/pratica1/dict.txt" />
+        <option value="$PROJECT_DIR$/pratica1/src/HashMapModified.java" />
+        <option value="$PROJECT_DIR$/pratica1/output/production/pratica1/dict_eng_to_port.txt" />
+        <option value="$PROJECT_DIR$/pratica1/output/production/pratica1/dict.txt" />
+        <option value="$PROJECT_DIR$/pratica1/output/production/pratica1/file_read.txt" />
+        <option value="$PROJECT_DIR$/pratica1/output/production/pratica1/file_read2.txt" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex6_c.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex6.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/ExpressionTree.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/EX7.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/Ex7.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/TreeNode.java" />
+        <option value="$PROJECT_DIR$/pratica1/src/pratica2/Hello.g4" />
+        <option value="$PROJECT_DIR$/pratica1/src/pratica2/comands.txt" />
+        <option value="$PROJECT_DIR$/pratica2/ex8/MyQuestionsVisitor.java" />
       </list>
     </option>
   </component>
@@ -121,8 +130,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1280" />
-    <option name="height" value="750" />
+    <option name="x" value="208" />
+    <option name="y" value="421" />
+    <option name="width" value="1270" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -141,13 +152,13 @@
             <path>
               <item name="Compiladores" type="b2602c69:ProjectViewProjectNode" />
               <item name="Compiladores" type="462c0819:PsiDirectoryNode" />
-              <item name="pratica1" type="462c0819:PsiDirectoryNode" />
+              <item name="pratica2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Compiladores" type="b2602c69:ProjectViewProjectNode" />
               <item name="Compiladores" type="462c0819:PsiDirectoryNode" />
-              <item name="pratica1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pratica2" type="462c0819:PsiDirectoryNode" />
+              <item name="ex8" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,14 +169,20 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550595352789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552416410945" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pratica1/src/pratica2/comands.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pratica1/output/production/pratica1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -179,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Ex3">
+  <component name="RunManager" selected="Application.Ex7">
     <configuration name="Ex1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex1" />
       <module name="pratica1" />
@@ -194,12 +211,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex7" />
+      <module name="pratica1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Ex1" />
       <item itemvalue="Application.Ex3" />
+      <item itemvalue="Application.Ex7" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex7" />
         <item itemvalue="Application.Ex3" />
         <item itemvalue="Application.Ex1" />
       </list>
@@ -217,11 +243,23 @@
       <updated>1550589009267</updated>
       <workItem from="1550589010900" duration="6487000" />
       <workItem from="1550598613798" duration="67000" />
+      <workItem from="1551194132923" duration="6445000" />
+      <workItem from="1551818183775" duration="8790000" />
+      <workItem from="1551884870715" duration="3860000" />
+      <workItem from="1551890841555" duration="12207000" />
+      <workItem from="1551959118094" duration="2660000" />
+      <workItem from="1552066217065" duration="13000" />
+      <workItem from="1552403091689" duration="1489000" />
+      <workItem from="1552416005284" duration="99000" />
+      <workItem from="1552416142964" duration="352000" />
+      <workItem from="1552416989924" duration="505000" />
+      <workItem from="1554382737831" duration="74000" />
+      <workItem from="1554711769203" duration="714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6554000" />
+    <option name="totallyTimeSpent" value="43762000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -235,7 +273,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10832444" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11419424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -251,9 +289,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31113538" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2521834" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32969433" />
+      <window_info anchor="bottom" id="Tool Output" order="12" weight="0.32969433" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="13" weight="0.32969433" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -272,40 +312,43 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex1.java">
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex1.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/numbers.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/HashMapModified.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Calculator.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex3.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex4_bashPipeline.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/file_read2.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/dict_eng_to_port.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/dict.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/file_read.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/dict2.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex6_c.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/Ex2.class" />
+    <entry file="file://$PROJECT_DIR$/pratica1/output/production/pratica1/Ex3.class" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex2.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex4_v2.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/ReadWordsToNumbers.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex5.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex6.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex7.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/TreeNode.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/pratica2/HelloLexer.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/pratica2/HelloBaseListener.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/pratica2/HelloParser.java" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/pratica2/Hello.g4" />
+    <entry file="file://$PROJECT_DIR$/pratica1/src/pratica2/comands.txt" />
+    <entry file="file://$PROJECT_DIR$/pratica2/ex8/MyQuestionsVisitor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="495">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex2.java">
+    <entry file="file://$PROJECT_DIR$/pratica2/ex8/MyQuestionsVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pratica1/numbers.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pratica1/src/Ex4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+        <state relative-caret-position="264">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -352,7 +395,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -369,7 +412,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
